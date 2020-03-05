@@ -1,0 +1,21 @@
+
+ng new jour5
+cd jour5
+npm i bootstrap
+
+modification du fichier angular.json
+
+"styles": [
+  "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "src/styles.css"
+],
+
+ng serve --open
+
+--------------------------------
+
+cet après midi nous allons réaliser une nouvelle commande 
+
+ng build --prod pour déployer notre application sur internet 
+https://formation.webdevpro.net/angular/10-deploiement.html
+

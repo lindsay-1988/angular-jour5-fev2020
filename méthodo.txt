@@ -59,6 +59,143 @@ si l'url est http://localhost:4200
 balise va être remplacée par <app-not-found></app-not-found>
 si l'url est http://localhost:4200/bnbalbala
 
+test 
+
+------------------
+
+SPA => Single Page Application = application
+qui est chargée 1 seule fois 
+
+menu.component.html
+
+dans les balises <a href=""> => <a routerLink="">
+dans la valeur => il faut par contre mettre un /
+
+
+------------------
+
+remplir la page Accueil
+
+une liste de tous les articles 
+
+utiliser un service : https://jsonplaceholder.typicode.com/posts
+
+app.module.ts
+charger le module HttpClientModule
+accueil.component.ts
+
+
+dans le fichier app/app.module.ts
+
+ajouter une nouvelle route
+RouterModule
+
+dans le fichier app.module.ts
+ajouter une route variable 
+{ path : "article/:id" , component : ArticleComponent} ,
+
+
+dans 
+ <a [routerLink]="['/article', article.id]" class="btn btn-primary">Read More</a>
+
+
+nous allons créer un nouveau service qui va être en charge d'appeler
+toutes les méthodes
+get
+get pour 1 article
+post
+delete
+put
+
+ng g s service/article-fictif
+
+--------------------
+
+back office :
+
+
+ng g c back/dashboard
+
+ajouter la http://localhost:4200/admin  => dashboard
+ { path : "admin" , component : DashboardComponent },
+
+dans le composant menu => lien admin
+dans menu
+
+<ul class="navbar-nav">
+     <li class="nav-item">
+         <a routerLink="/admin" class="nav-link">Admin</a>
+     </li>
+</ul>
+
+Dans le fichier dashboard.component.html
+
+ng g c back/article/liste
+
+admin/article => liste 
+
+app.module.ts
+
+ng g c back/menu-dashboard
+
+dans dashboard et liste 
+
+<app-menu-dashboard></app-menu-dashboard>
+dans la première colonne
+
+dans menu-dashboard 
+
+<div class="card">
+    <h2 class="card-header">Gestion</h2>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <a routerLink="/admin/article/liste">Articles</a>
+        </li>
+    </ul>
+</div>
+
+-----------------------
+
+Ajouter un article
+
+
+ng g c back/article/ajouter
+
+admin/article/ajouter => 
+
+app.module
+ { path : "admin/article/liste" , component : ListeComponent },
+
+liste.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
