@@ -13,6 +13,8 @@ import { NotFoundComponent } from './front/not-found/not-found.component';
 import { ArticleFictifService } from "./service/article-fictif.service";
 import { DashboardComponent } from './back/dashboard/dashboard.component';
 import { ListeComponent } from './back/article/liste/liste.component';
+import { MenuDashboardComponent } from './back/menu-dashboard/menu-dashboard.component';
+import { AjouterComponent } from './back/article/ajouter/ajouter.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ListeComponent } from './back/article/liste/liste.component';
     ArticleComponent,
     NotFoundComponent,
     DashboardComponent,
-    ListeComponent
+    ListeComponent,
+    MenuDashboardComponent,
+    AjouterComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,7 @@ import { ListeComponent } from './back/article/liste/liste.component';
         { path : "" , component : AccueilComponent},
         { path : "article/:id" , component : ArticleComponent} ,
         { path : "admin/article/liste" , component : ListeComponent },
+        { path : "admin/article/ajouter" , component : AjouterComponent },
         { path : "admin" , component : DashboardComponent }, // admin après admin/article/liste
         { path : "**", component : NotFoundComponent} // not fond toujours à la fin 
       ]
