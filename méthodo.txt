@@ -1,0 +1,73 @@
+créer un nouveau composant
+commun/menu
+
+lien vers la page d'accueil
+
++
+
+lien vers la page d'admin
+
+-----------
+
+npm i -g @angular/cli
+
+ng g c commun/menu
+
+ng g c front/accueil
+ng g c front/article
+ng g c front/not-found
+
+
+Méthodo créer un site sur Angular
+
+1 arborescence  (combien de pages à faire)
+
+2 menu du front (dans un dossier commun)
+
+3 créer les composants pour chaque page 
+(tous les mettre dans un dossier front)
+
+en cas d'erreur : 
+ng g c ablabla
+
+revenir en arrière ???
+src/app/app.module.ts
+ supprimer la déclaration
+ supprimer l'import 
+ supprimer le dossier créé 
+
+ng g c front/accueil
+ng g c front/article
+ng g c front/not-found
+
+
+-----------------
+
+liaison entre les composants que je viens de crée
+et le router
+src/app/app.module.ts
+
+
+------------------
+
+dans app.component.html
+<router-outlet></router-outlet>
+
+balise va être remplacée par <app-accueil></app-accueil>
+si l'url est http://localhost:4200
+
+balise va être remplacée par <app-not-found></app-not-found>
+si l'url est http://localhost:4200/bnbalbala
+
+
+
+
+
+
+
+
+
+
+
+
+
