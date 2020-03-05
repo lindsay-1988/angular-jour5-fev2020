@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {ArticleFictifService} from "../../service/article-fictif.service"
 
 @Component({
   selector: 'app-accueil',
@@ -9,14 +9,13 @@ import {HttpClient} from "@angular/common/http";
 export class AccueilComponent implements OnInit {
 
   articles ;
-  url = "https://jsonplaceholder.typicode.com/posts";
 
-  constructor(private http : HttpClient) {
+  constructor(private service : ArticleFictifService) {
    }
 
   ngOnInit(): void {
 
-    this.http.get(this.url)
+    this.service.getAllArticles()
       .subscribe( (response : Response) => {
         this.articles = response;
         console.log(this.articles)

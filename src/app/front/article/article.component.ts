@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import { ActivatedRoute } from "@angular/router"; // ce composant permet de récupérer l'id dans l'url actuel
 import {ArticleFictifService} from "../../service/article-fictif.service"
 
@@ -10,9 +9,7 @@ import {ArticleFictifService} from "../../service/article-fictif.service"
 })
 export class ArticleComponent implements OnInit {
   article; // 1 seul article
-  url = "https://jsonplaceholder.typicode.com/posts";
   constructor(
-      private http : HttpClient, 
       private router : ActivatedRoute ,
       private service : ArticleFictifService) 
   { }

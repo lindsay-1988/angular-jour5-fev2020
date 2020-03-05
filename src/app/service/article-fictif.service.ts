@@ -4,7 +4,9 @@ import { HttpClient } from "@angular/common/http";
   providedIn: 'root'
 })
 export class ArticleFictifService {
-  url = "https://jsonplaceholder.typicode.com/posts";
+
+  // https://immense-tundra-17548.herokuapp.com/articles
+  url = "https://immense-tundra-17548.herokuapp.com/articles";
 
   constructor(private http : HttpClient) { }
 
